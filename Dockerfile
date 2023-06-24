@@ -1,5 +1,5 @@
-FROM node:10.16.0-jessie
-RUN apt-get update && apt-get install git -y && apt-get install imagemagick -y;
+FROM node:14
+RUN apt-get update && apt-get install git imagemagick -y;
 
 WORKDIR /ecs-app
 
@@ -12,6 +12,7 @@ RUN chown -R node:node /ecs-app
 
 ENV NODE_ENV=production
 ENV ENV_ECS=true
+ENV PORT=8080
 USER node
 EXPOSE $PORT
 
