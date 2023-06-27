@@ -7,3 +7,7 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "<APP_NAME>"
           ContainerPort: <SERVICE_PORT>
+        CapacityProviderStrategy:
+          - CapacityProvider: test
+            Base: 0
+            Weight: 1
